@@ -1,0 +1,10 @@
+# Python cache files
+__pycache__/
+*.pyc
+
+# Generated outputs
+outputs/
+
+# Python virtual environments
+.venv/
+venv/
