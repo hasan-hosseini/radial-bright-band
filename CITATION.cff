@@ -9,6 +9,8 @@ authors:
     email: hasan.hosseini@smhi.se
     orcid: "https://orcid.org/0000-0001-6130-0937"
 version: 1.0.0
+doi: 10.5281/zenodo.24264529
+date-released: 2026-11-15
 repository-code: "https://github.com/hasan-hosseini/radial-bright-band"
 abstract: >-
   Python implementation of radial bright-band detection and

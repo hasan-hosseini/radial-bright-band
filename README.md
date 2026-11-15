@@ -1,7 +1,9 @@
 # Radial bright-band detection
 
-Hasan Hosseini
-Swedish Meteorological and Hydrological Institute (SMHI), Sweden  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24264528.svg)](https://doi.org/10.5281/zenodo.24264528)
+
+**Hasan Hosseini**\
+Swedish Meteorological and Hydrological Institute (SMHI), Sweden\
 Email: hasan.hosseini@smhi.se
 
 This repository implements the radial bright-band (BB) detection and significant rise–fall segmentation methodology described in Hosseini et al. (2026).
@@ -113,3 +115,17 @@ The four segment-specific columns are populated only on BBP rows, including when
 | `invalid_profile` | Initial internal raw-profile status; replaced by one of the more specific raw-profile statuses during normal processing and not expected in a completed CSV. |
 
 Accepted statuses take precedence over raw-profile diagnostics. Smoothing may reconstruct heights from neighboring azimuths even when the raw profile was rejected or flagged as an outlier. The `outlier_01` flag retains that information independently of final acceptance.
+
+## Citation
+
+If you use this repository or the radial bright-band detection methodology in your research, please cite both the associated scientific manuscript and the software.
+
+### Scientific manuscript
+
+Hosseini et al. (2026). *Bright-band detection from C-band radar azimuthal reflectivity profiles validated by MRR-derived reference melting-layer events*. Atmospheric Measurement Techniques.
+
+### Software
+
+Hosseini, H. (2026). *Radial bright-band detection* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.24264529
+
+For all versions of the software, see https://doi.org/10.5281/zenodo.24264528.
