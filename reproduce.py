@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Main script for radial bright-band (BB) detection and generation
-of illustrations corresponding to Figures 4 and 5 of the manuscript.
+of illustrations corresponding to Figures 4 and 5 of Hosseini et al. (2026).
 
 Processes ODIM HDF5 radar volumes and generates azimuthal reflectivity
 plots and CSV files containing BB characteristics, significant rise–fall
@@ -9,7 +9,6 @@ segments, and stratiformity diagnostics.
 
 Author: Hasan Hosseini
 Affiliation: Swedish Meteorological and Hydrological Institute (SMHI)
-Reference: Hosseini et al. (2026)
 """
 
 import argparse

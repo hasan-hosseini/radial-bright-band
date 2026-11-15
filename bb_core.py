@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Core functions for radial bright-band (BB) detection.
+Core functions for radial bright-band (BB) detection
+as described in Hosseini et al. (2026).
 
 Implements reflectivity gridding, raw BB characteristic
-detection, rise-fall segmentation, outlier filtering,
+detection, significant rise-fall segmentation, outlier filtering,
 and azimuthal smoothing.
 
 Author: Hasan Hosseini
 Affiliation: Swedish Meteorological and Hydrological Institute (SMHI)
-Reference: Hosseini et al. (2026)
 """
 
 from __future__ import annotations

@@ -4,11 +4,20 @@ Hasan Hosseini
 Swedish Meteorological and Hydrological Institute (SMHI), Sweden  
 Email: hasan.hosseini@smhi.se
 
-This repository implements the radial bright-band (BB) detection and significant rise–fall segmentation methodology described in the manuscript (Hosseini et al. 2026).
+This repository implements the radial bright-band (BB) detection and significant rise–fall segmentation methodology described in Hosseini et al. (2026).
 
 It processes ODIM HDF5 radar volumes and generates illustrations of azimuthal reflectivity profiles and BB detections over the azimuth–height domain, corresponding to Figures 4 and 5 of the manuscript. The results are also saved as CSV files containing BB heights, significant rise–fall segment boundaries, and other diagnostics, including the stratiformity check across azimuths.
 
 ## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/hasan-hosseini/radial-bright-band.git
+cd radial-bright-band
+```
+
+Install the required Python packages:
 
 ```bash
 python3 -m pip install -r requirements.txt
