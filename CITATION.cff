@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below and cite the associated scientific publication."
+title: "Radial bright-band detection"
+type: software
+authors:
+  - family-names: Hosseini
+    given-names: Hasan
+    affiliation: "Swedish Meteorological and Hydrological Institute (SMHI), Sweden"
+    email: hasan.hosseini@smhi.se
+    orcid: "https://orcid.org/0000-0001-6130-0937"
+version: 1.0.0
+repository-code: "https://github.com/hasan-hosseini/radial-bright-band"
+abstract: >-
+  Python implementation of radial bright-band detection and
+  significant rise-fall segmentation using azimuthal reflectivity
+  profiles derived from ODIM HDF5 weather radar volumes.
+  The repository includes scripts and example radar data for
+  reproducing Figures 4 and 5 of the associated scientific manuscript.
+keywords:
+  - weather radar
+  - bright band
+  - melting layer
+  - radar reflectivity
+  - C-band radar
+  - ODIM HDF5
