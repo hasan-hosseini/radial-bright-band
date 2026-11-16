@@ -8,7 +8,7 @@ authors:
     affiliation: "Swedish Meteorological and Hydrological Institute (SMHI), Sweden"
     email: hasan.hosseini@smhi.se
     orcid: "https://orcid.org/0000-0001-6130-0937"
-version: 1.0.1
+version: 1.0.2
 doi: 10.5281/zenodo.24264528
 date-released: 2026-11-16
 repository-code: "https://github.com/hasan-hosseini/radial-bright-band"
