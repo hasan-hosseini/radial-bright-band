@@ -126,6 +126,5 @@ Hosseini et al. (2026). *Bright-band detection from C-band radar azimuthal refle
 
 ### Software
 
-Hosseini, H. (2026). *Radial bright-band detection* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.24264529
-
-For all versions of the software, see https://doi.org/10.5281/zenodo.24264528.
+Hosseini, H. (2026). *Radial bright-band detection*. Zenodo.
+https://doi.org/10.5281/zenodo.24264528
