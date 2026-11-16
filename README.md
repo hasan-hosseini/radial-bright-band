@@ -122,7 +122,7 @@ If you use this repository or the radial bright-band detection methodology in yo
 
 ### Scientific manuscript
 
-Hosseini et al. (2026). *Bright-band detection from C-band radar azimuthal reflectivity profiles validated by MRR-derived reference melting-layer events*. Atmospheric Measurement Techniques.
+Hosseini et al. (2026). *Bright-band detection via radial reflectivity profiles from volume-scanning radar: validation by MRR-derived melting-layer events*. Atmospheric Measurement Techniques.
 
 ### Software
 
