@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Main script for radial bright-band (BB) detection and generation
-of illustrations corresponding to Figures 4 and 5 of Hosseini et al. (2026).
+of illustrations corresponding to Figures 5 and 6 of Hosseini et al. (2026).
 
 Processes ODIM HDF5 radar volumes and generates azimuthal reflectivity
 plots and CSV files containing BB characteristics, significant rise–fall
@@ -28,7 +28,7 @@ def parse_args():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     p.add_argument('--input', required=True, type=Path, help='Path to one ODIM HDF5 radar volume')
     p.add_argument('--output-dir', type=Path, default=Path('outputs'))
-    p.add_argument('--tag', default=None, help='Output stem: fig4a for single mode or fig4 for --both')
+    p.add_argument('--tag', default=None, help='Output stem: fig5a for single mode or fig5 for --both')
     p.add_argument('--both', action='store_true', help='Generate panels a (100th percentile) and b (90th percentile), each with a CSV')
     p.add_argument('--percentile', type=float, default=100, help='Azimuth/height bin percentile of linear Z')
     p.add_argument('--height-min', type=float, default=356)
@@ -199,7 +199,7 @@ def main():
     if a.both:
         from copy import copy
         base = a.tag or a.input.stem
-        # Accept --tag fig4 or --tag fig4a, consistently producing fig4a/fig4b.
+        # Accept --tag fig5 or --tag fig5a, consistently producing fig5a/fig5b.
         if a.tag and base.endswith(('a', 'b')) and len(base) > 1 and base[-2].isdigit():
             base = base[:-1]
         panels=[]

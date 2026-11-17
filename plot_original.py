@@ -1,6 +1,6 @@
 """
 Plot azimuthal reflectivity profiles and detected bright-band (BB)
-characteristics, as illustrated in Figures 4 and 5 of Hosseini et al. (2026).
+characteristics, as illustrated in Figures 5 and 6 of Hosseini et al. (2026).
 
 Contains plot_Z_azimuth_height_summary_ny_final, which displays
 linear reflectivity (Z), accepted smoothed BB peaks and boundaries,

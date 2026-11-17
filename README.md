@@ -8,7 +8,7 @@ Email: hasan.hosseini@smhi.se
 
 This repository implements the radial bright-band (BB) detection and significant rise–fall segmentation methodology described in Hosseini et al. (2026).
 
-It processes ODIM HDF5 radar volumes and generates illustrations of azimuthal reflectivity profiles and BB detections over the azimuth–height domain, corresponding to Figures 4 and 5 of the manuscript. The results are also saved as CSV files containing BB heights, significant rise–fall segment boundaries, and other diagnostics, including the stratiformity check across azimuths.
+It processes ODIM HDF5 radar volumes and generates illustrations of azimuthal reflectivity profiles and BB detections over the azimuth–height domain, corresponding to Figures 5 and 6 of the manuscript. The results are also saved as CSV files containing BB heights, significant rise–fall segment boundaries, and other diagnostics, including the stratiformity check across azimuths.
 
 ## Installation
 
@@ -25,33 +25,33 @@ Install the required Python packages:
 python3 -m pip install -r requirements.txt
 ```
 
-## Generate results for Figures 4 and 5
+## Generate results for Figures 5 and 6
 
-Supply the original radar volume using `--input`. Place the two original HDF5 files corresponding to Figures 4 and 5 in `inputs/`.
+Supply the original radar volume using `--input`. Place the two original HDF5 files corresponding to Figures 5 and 6 in `inputs/`.
 
-**Figure 4 — Ängelholm C-band Weather Radar (CWR), 4 February 2022, 14:00 UTC**
-
-The following command generates `fig4a_straight.png`, `fig4a_straight.csv`, `fig4b_straight.png` and `fig4b_straight.csv` in `outputs/`.
-
-```bash
-python3 reproduce.py \
-  --input inputs/seang_qcvol_pn129_20220204T140000Z_0x81540b.h5 \
-  --both --tag fig4
-```
-
-**Figure 5 — Ängelholm CWR, 18 May 2025, 11:50 UTC**
+**Figure 5 — Ängelholm C-band Weather Radar (CWR), 4 February 2022, 14:00 UTC**
 
 The following command generates `fig5a_straight.png`, `fig5a_straight.csv`, `fig5b_straight.png` and `fig5b_straight.csv` in `outputs/`.
 
 ```bash
 python3 reproduce.py \
-  --input inputs/seang_qcvol_pn129_20250518T115000Z_0x81148b.h5 \
+  --input inputs/seang_qcvol_pn129_20220204T140000Z_0x81540b.h5 \
   --both --tag fig5
+```
+
+**Figure 6 — Ängelholm CWR, 18 May 2025, 11:50 UTC**
+
+The following command generates `fig6a_straight.png`, `fig6a_straight.csv`, `fig6b_straight.png` and `fig6b_straight.csv` in `outputs/`.
+
+```bash
+python3 reproduce.py \
+  --input inputs/seang_qcvol_pn129_20250518T115000Z_0x81148b.h5 \
+  --both --tag fig6
 ```
 
 The default propagation method is `straight` (straight-line spherical-Earth geometry). To use standard refraction, add `--propagation standard`; the paired output filenames then end in `_standard` instead of `_straight`. In single-panel mode, `--tag` sets the filename stem directly.
 
-Panel a uses maximum Z and panel b uses the 90th percentile of Z in each azimuth–height bin. To generate one panel with a customized percentile, replace `--both --tag fig5` with, for example, `--percentile 95 --tag fig5_p95`. Specify `--output-dir` to change the output location. Run `python3 reproduce.py --help` for all options.
+Panel a uses maximum Z and panel b uses the 90th percentile of Z in each azimuth–height bin. To generate one panel with a customized percentile, replace `--both --tag fig6` with, for example, `--percentile 95 --tag fig6_p95`. Specify `--output-dir` to change the output location. Run `python3 reproduce.py --help` for all options.
 
 ## Scripts
 
@@ -59,7 +59,7 @@ Panel a uses maximum Z and panel b uses the 90th percentile of Z in each azimuth
 |---|---|
 | `reproduce.py` | Main entry point: prepares reflectivity profiles, produces the figures and exports the CSV diagnostics. |
 | `bb_core.py` | Implements the radial BB detection methodology, including azimuth–height reflectivity gridding (`profile_grid`), raw BB characteristic detection and segment selection (`raw_components`), significant rise–fall segmentation (`ischange_gradient`), outlier filtering and smoothing (`mask_and_smooth`), and triangular azimuthal smoothing (`smooth_heights_triangular`). |
-| `plot_original.py` | Generates azimuth–height illustrations of linear reflectivity (Z), accepted smoothed BB peaks and boundaries, and significant rise–fall segment boundaries (`plot_Z_azimuth_height_summary_ny_final`), corresponding to Figures 4 and 5 of the manuscript. |
+| `plot_original.py` | Generates azimuth–height illustrations of linear reflectivity (Z), accepted smoothed BB peaks and boundaries, and significant rise–fall segment boundaries (`plot_Z_azimuth_height_summary_ny_final`), corresponding to Figures 5 and 6 of the manuscript. |
 | `requirements.txt` | Python dependencies. |
 
 ## Reflectivity and BB detection
@@ -77,7 +77,7 @@ The default figure window is 300–3000 m a.s.l. The reflectivity plotting grid 
 Both panels use a shared linear color scale in `--both` mode. The default minimum is zero; the common maximum is the larger of the 99th percentiles of the two plotted Z fields. Values above the maximum are saturated. Colorbar ticks are integers in the displayed ×10ⁿ units. Use `--vmin` and `--vmax` to specify fixed limits, for example:
 
 ```bash
-python3 reproduce.py --input /path/to/volume.h5 --both --tag fig5 --vmin 0 --vmax 5000
+python3 reproduce.py --input /path/to/volume.h5 --both --tag fig6 --vmin 0 --vmax 5000
 ```
 
 ## CSV columns
